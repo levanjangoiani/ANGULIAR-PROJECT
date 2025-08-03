@@ -1,0 +1,31 @@
+.hover:hover{
+    color: black;
+    transition: 0.5s;
+    font-size: 20px;
+}
+.logo{
+   width: 80px;
+   height: 55px;
+   margin-right: 5px;
+   margin-left: 20px;
+}
+.display{
+    visibility: hidden;
+}
+.visual{
+    visibility: visible !important;
+    
+}
+@media (max-width: 576px) {
+    .logos{
+       margin-left: 120px;
+    }
+    .navbar-collapse{
+        text-align: center;
+    }
+}
+@media (max-width: 991px) {
+    .navbar-collapse{
+        text-align: center;
+    }
+}

@@ -1,0 +1,137 @@
+.row{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 0!important;
+    width: 98%;
+}
+.perent-card{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    flex-wrap: wrap;
+    position: relative;
+    justify-content: center;
+}
+.card{
+    display: flex;
+    flex-direction: column;
+    background: #000000;
+    color: white;
+    max-height: 480px;
+    border-radius: 10px;
+    width: 340px;
+    overflow: hidden;
+    cursor: pointer;
+}
+.overflow{
+    overflow: hidden; 
+}
+.overflow img{
+    min-height: 200px;
+    max-height: 200px;
+    object-fit: cover;
+    width: 100%;
+}
+.overflow:hover img{
+    transform: scale(1.05);
+    transition: transform 0.5s;
+}
+.card-info{
+    display: flex;  
+    flex-direction: column;
+    gap: 2px;
+    overflow: hidden;
+}
+.card-info h1{
+    font-size: 20px;
+    font-weight: 500;
+    padding: 10px 15px;
+    overflow: hidden;
+    max-width: 480px;
+    max-height: 40px;
+}
+.card-info p{
+    font-size: 15px;
+    font-weight: 400;
+    padding: 0 5px 10px 15px;
+    margin-bottom: 0;
+}
+.card-details{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 20px 15px 10px 15px;
+    border-top: solid 1px #6B7280;
+}
+.card-details h1{
+    font-size: 20px;
+    font-weight: 500;
+    background-color: rgb(15, 190, 15);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+section{
+    display: flex;
+    justify-content: center;
+    padding: 50px 0px;
+}
+.pages-parant{
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+}
+.pages-parant p{
+     padding-top: 3px;
+    margin-bottom: 0px;
+    font-size: 23px;
+}
+.pages-parant button{
+    background-color: transparent;
+    border: none;
+    
+}
+.pages-parant button:hover{
+    font-weight: 900;
+}
+.disabled:hover{
+    font-weight: none;
+}
+.total{
+    font-size: 30px;
+    margin: 20px 30px;
+    font-weight: 900;
+}
+.result{
+    font-size: 33px;
+    text-align: center;
+    padding-top: 20px;
+    font-weight: 900;
+}
+.section{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+}
+select{
+    width: 200px;
+    height: 37px;
+    border-radius: 10px;
+    border: 1px solid gray;
+    background-color: transparent;
+}
+.display{
+    display: none;
+}
+.visible{
+    display: block;
+}
+@media screen and (max-width:500px){
+    .row{
+        width: 100%;
+        margin: auto;
+    }
+}

@@ -1,0 +1,173 @@
+
+.perent-carusel{
+  width: 100%;
+  margin: auto;
+}
+.carousel-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin: auto;
+  padding: 20px;
+}
+.carousel{
+  display: flex;
+  flex-direction: row;
+  max-height: 480px;
+  gap: 20px;
+}
+a{
+  text-decoration: none;
+}
+.card{
+  display: flex;
+  flex-direction: column;
+  background: #000000;
+  color: white;
+  max-height: 480px;
+  border-radius: 10px;
+  width: 340px;
+
+  overflow: hidden;
+  cursor: pointer;
+}
+.overflow{
+  overflow: hidden;
+  
+}
+.overflow img{
+  min-height: 200px;
+  max-height: 200px;
+  object-fit: cover;
+  width: 100%;
+}
+.overflow:hover img{
+  transform: scale(1.05);
+  transition: transform 0.5s;
+}
+.cars-card-info{
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  overflow: hidden;
+  
+}
+.cars-card-info h1{
+  font-size: 20px;
+  font-weight: 500;
+  padding: 10px 15px;
+  overflow: hidden;
+  max-width: 480px;
+  max-height: 40px;
+}
+.cars-card-info p{
+  font-size: 15px;
+  font-weight: 400;
+  padding: 0 5px 10px 15px;
+  margin-bottom: 0;
+}
+.cars-card-details{
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 20px 15px 10px 15px;
+  border-top: solid 1px #6B7280;
+}
+.cars-card-details h1{
+  font-size: 20px;
+  font-weight: 500;
+  background-color: rgb(15, 190, 15);
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.carousel-buttons{
+    display: flex;
+    gap: 10px;
+    width: 300px;
+    padding-left: 212px;
+}
+button:disabled {
+  background-color: #ccc; 
+  color: #666; 
+  
+  cursor: not-allowed;
+  border: none;
+  opacity: 0.5;
+}
+.disabled{
+  background-color: #ccc; 
+  color: #666; 
+  cursor: not-allowed;
+  border: none;
+  opacity: 0.5;
+}
+.top{
+  display: flex;
+  justify-content: space-around;
+  padding-top: 50px;
+    padding-bottom: 0px;
+    height: 100px;
+}
+.carousel-buttons button{
+  display: flex;
+  background-color: #FCFDFD;
+  color: black;
+  border: none;
+  cursor: pointer;
+  align-items: center;
+  align-self: center;
+  padding: 10px 15px;
+  border-radius: 50%;
+  font-size: 25px;
+  font-weight: 500;
+  
+}
+.fullCars{
+  display: flex;
+  gap: 20px;
+  align-items: center ;
+  width: 600px;
+}
+.fullCars p{
+  margin-top: 20px;
+  font-size: 13px;
+  color: rgb(167, 158, 158);
+}
+.fullCars p:hover{
+  color: #222732;
+  cursor: pointer;
+}
+@media (max-width: 576px) {
+  .fullCars{
+    gap:0px;
+    flex-direction: column;
+    margin-top: 18px;
+  }
+    .fullCars h1{
+      font-size: 18px;
+      margin-bottom: 0px
+  }
+  .fullCars p{
+    font-size: 12px;
+    margin: 0;
+  }
+  .carousel-buttons{
+    padding-left: 13px;
+    margin-top: 50px;
+  }
+  .carousel-buttons p{
+    font-size: 19px;
+  }
+}
+@media ( (max-width: 991px) and (min-width: 577px)) {
+  .fullCars h1{
+      font-size: 32px;
+      margin-left: 116px;
+  }
+    .carousel-buttons{
+      padding-left: 93px;
+    }
+}

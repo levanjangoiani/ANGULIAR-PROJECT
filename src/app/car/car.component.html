@@ -1,0 +1,29 @@
+<div class="perent" *ngFor="let car of sendCar">
+    <div class="full">
+    <div class="top">
+    <div class="image">
+        <img [src]="car.imageUrl" alt="">
+    </div>
+    <div class="line"></div>
+    <div class="right">
+        <div class="price">
+            <p>$ 20000</p>
+        </div>
+        <div class="spects">
+            <p>Brand: <span>{{car.brand}}</span></p>
+            <p>Model: <span>{{car.model}}</span></p>
+            <p>Year: <span>{{car.year}}</span></p>
+            <p>Color: <span>{{car.color}}</span></p>
+        </div>
+        <div class="contact">
+        <div class="buy">
+            <p><i class="fa-solid fa-phone"></i> {{number}}</p>
+        </div>
+        <div class="text">
+            <p><i class="fa-brands fa-viber"></i>Text On Viber</p>
+        </div>
+        </div>
+        </div>
+    </div>
+    </div>
+</div>

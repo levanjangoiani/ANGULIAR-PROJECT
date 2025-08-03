@@ -1,0 +1,53 @@
+<div class="section">
+<select (change)="brandChange($event)">
+  <option value="" disabled selected>Brands</option>
+  <option *ngFor="let b of brand" [value]="b">{{ b }}</option>
+</select>
+
+<!-- <select (change)="modelChange($event)" >
+  <option value="" disabled selected>Model</option>
+  <option *ngFor="let m of model" [value]="m">{{ m }}</option>
+</select>  -->
+
+<select (change)="yearChange($event)" >
+  <option value="" disabled selected>Years</option>
+  <option *ngFor="let y of rowYear" [value]="y">{{ y }}</option>
+</select>
+<button class="btn btn-success" (click)="search()">search</button>
+<button class="btn btn-danger" [ngClass]="{'display':!isVisible , 'visible':isVisible }" (click)="clear()">clear</button>
+</div>
+
+
+
+<div class="total">Total cars avilable: {{allCars.length}}</div>
+<div class="row"  >
+      <div  class="perent-card ">
+        <a *ngFor="let car of pagedCars let i = index">
+          
+          <div class="card" [routerLink]="['/cars',car.id]">
+            <div class="overflow">
+              <img [src]="car.imageUrl " alt="{{ car.brand }} {{car.model}} Not Found 404" />
+            </div>
+            
+            <div class="card-info">
+              <h1>{{car.brand}}  </h1>
+              <h1>model: {{car.model}}</h1>
+              <p>Year: {{car.year}}</p>
+              <p>Color: {{car.color}}</p>
+            </div>
+            <div class="card-details">
+              <h1>20000$</h1>
+              
+            </div>      
+          </div>
+        </a>
+      </div>
+    </div>
+    <p class="result" *ngIf="!allCars.length">no result</p>
+    <section class="page">
+    <div class="pages-parant">
+        <button class="prevPage" (click)="prevPage()" [disabled]="currentPage === 1">&#60; -</button>
+        <p class="pageNumber" >{{currentPage}}</p>
+        <button  class="nextPage" (click)="nextPage()" [disabled]="currentPage * itemsPerPage >= allCars.length">- &#62;</button>
+    </div>
+    </section>

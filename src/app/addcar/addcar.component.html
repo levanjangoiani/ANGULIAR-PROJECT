@@ -1,0 +1,64 @@
+<div class="full">
+
+<form action="">
+    <button class="btn" (click)="toggleVisibility()" 
+    [ngClass]="{'activate' : isVisible , ' nonActivate' : !isVisible}" >{{editt}}</button>
+    <div class="id inpDiv" *ngIf="isVisible ">
+        <label for="">enter car Id</label>
+        <input type="number" [(ngModel)]='carId' name="carId" placeholder="Enter car Id" >
+        
+    </div>
+    <div class="inpDiv">
+        <label for="addCar.brand">Enter car brand</label>
+        <input type="text"[(ngModel)]="addCar.brand" name="addCar.brand" id="addCar.brand" placeholder="Enter car brand">
+    </div>
+    <div class="inpDiv">
+        <label for="addCar.model">Enter car model</label>
+        <input type="text"[(ngModel)]="addCar.model" name="addCar.model" id="addCar.model" placeholder="Enter car model">
+    </div>
+    <div class="inpDiv">
+        <label for="addCar.year">Enter car Year</label>
+        <input type="number" [(ngModel)]="addCar.year" name="addCar.year" id="addCar.year" placeholder="Enter car Year">
+    </div>
+    <div class="inpDiv">
+        <label for="addCar.color">Enter car Color</label>
+        <input type="text" [(ngModel)]="addCar.color" name="addCar.color" id="addCar.color" placeholder="Enter car Color">
+    </div>
+    <div class="inpDiv">
+        <label for="addCar.imageUrl">Enter car ImageUrl</label>
+        <input type="text" [(ngModel)]="addCar.imageUrl" name="addCar.imageUrl" id="addCar.imageUrl" placeholder="Enter car ImageUrl">
+    </div>
+    <div class="button">
+        <button class="btn btn-success" *ngIf="!isVisible " (click)="save()">Add</button>
+        <button class="btn btn-warning"  *ngIf="isVisible " (click)="getCarId()">Search Car</button>
+        <button class="btn btn-success" *ngIf="isVisible " (click)="edit()">Edit</button>
+        <button class="btn btn-danger" *ngIf="isVisible" (click)="delete()" >Delete</button>
+        
+    </div>
+</form>
+
+<div class="row" *ngIf="hasInput()" 
+  [ngClass]="{'preview-card': true, 'active': addCar.brand}">
+      <div  class="perent-card ">
+        <a >
+          <div class="card" >
+            <div class="overflow">
+              <img [src]="addCar.imageUrl " alt="{{ idCar.imageUrl }} {{idCar.imageUrl}} Not Found 404" />
+            </div>
+            
+            <div class="card-info">
+              <h1>{{addCar.brand}}  </h1>
+              <h1>model: {{addCar.model}}</h1>
+              <p>Year: {{addCar.year}}</p>
+              <p>Color: {{addCar.color}}</p>
+            </div>
+            <div class="card-details">
+              <h1>20000$</h1>
+              
+            </div>      
+          </div>
+        </a>
+      </div>
+    </div>
+
+

@@ -1,0 +1,97 @@
+.head{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 25px;
+}
+.head h1{
+    color: rgb(0, 0, 0);
+     font-size: 65px;
+}
+.head p{
+    font-size: 42px;
+    margin-top: 26px;
+    margin-left: 5px;
+}
+.first{
+    height: 150px;
+    border: #0F1319 1.5px solid ;
+}
+.first img{
+    height: 100px;
+}
+.social{
+    display: flex;
+    justify-content: center;
+    gap: 35px;
+}
+.social-place{
+    display: flex;
+    border: 1px solid #b1b1b1;
+    border-radius: 10px;
+    height: 70px;
+    align-items: center;
+    width: 507px;
+}
+.social-place p{
+    color: rgb(0, 0, 0);
+    font-size: 25px;
+}
+.size{
+    font-size: 35px;
+    color: #000000;
+    margin-right: 25px;
+    margin-left: 35px ;
+}
+.go-somewere{
+    text-decoration: none;
+}
+.flex{
+    display: flex;
+    gap: 20px;
+    flex-direction: column !important;
+}
+.facebook{
+    display: flex;
+    justify-content: center;
+    margin-top: 35px;
+}
+.size1{
+    height: 35px;
+     margin-right: 25px;
+    margin-left: 35px ;
+}
+.social{
+    padding-bottom: 150px;
+}
+@media screen and (max-width:991px) {
+  .social{
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+  }
+  .flex{
+    width: 100%;
+  }
+
+  .social-place{
+    width: 95%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .social-place p{
+    margin-bottom: 0;
+    width: 100px;
+  }
+  .netlify{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start
+  }
+}
+@media screen and (max-width:500px) {
+  .head h1{
+    font-size: 45px;
+  }
+}

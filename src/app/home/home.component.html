@@ -1,0 +1,44 @@
+
+ <div class="top">
+ <div class="fullCars">
+    <h1>Recently Added Cars</h1>
+    <p routerLink="/cars">See All Cars Here > </p>
+ </div>
+ <div class="carousel-buttons" >
+      <button (click)="prev()">
+        <p>&#60;</p>
+      </button>
+      <button (click)="next()" [disabled]="!next">
+
+        <p>	&#62;</p>
+      </button>
+    </div>
+    </div>
+<div class="perent-carusel">
+
+
+<div class="carousel-container  " *ngIf="visibleCars.length > 0 " >
+   
+      <div  class="carousel ">
+        <a *ngFor="let car of visibleCars let i = index" [routerLink]="['/cars',car.id]">
+          <div class="card">
+            <div class="overflow">
+              <img [src]="car.imageUrl " alt="{{ car.brand }} {{car.model}} Not Found 404" />
+            </div>
+            
+            <div class="cars-card-info">
+              <h1>{{car.brand}}  </h1>
+              <h1>model: {{car.model}}</h1>
+              <p>Year: {{car.year}}</p>
+              <p>Color: {{car.color}}</p>
+            </div>
+            <div class="cars-card-details">
+              <h1>20000$</h1>
+              
+            </div>      
+          </div>
+        </a>
+      </div>
+    </div>
+   
+</div>

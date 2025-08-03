@@ -1,0 +1,29 @@
+{
+	"folders": [
+		{
+			"path": "../../../../angularService"
+		},
+		{
+			"path": "../../../../davaleba2"
+		},
+		{
+			"path": "../../.."
+		},
+		{
+			"path": "../../../../classwork"
+		},
+		{
+			"path": "../../../../angular1"
+		},
+		{
+			"path": "../../../../angular klasi/angular4"
+		},
+		{
+			"path": "../../../../portfolio"
+		}
+	],
+	"settings": {
+		"liveServer.settings.port": 5501,
+		"liveServer.settings.multiRootWorkspaceName": "portfolio"
+	}
+}

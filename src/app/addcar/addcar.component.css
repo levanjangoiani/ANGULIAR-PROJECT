@@ -1,0 +1,128 @@
+.activate{
+    background-color: yellow;
+    
+   
+}
+.nonActivate{
+    
+    background-color: red;
+}
+.full{
+    display: flex;
+}
+.btn-warning{
+    width: 71.63px;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 10px;
+    margin: 40px 20px;
+}
+
+.inpDiv{
+    flex-direction: column;
+    justify-content: center;
+    width: 322px;
+    justify-content: space-between;
+    display: flex;
+    gap: 5px;
+}
+
+.perent-card{
+    padding-left: 100px;
+    margin-top: 104px;
+    margin-bottom: -38px;
+    
+}
+.card{
+    display: flex;
+    flex-direction: column;
+    background: #000000;
+    color: white;
+    max-height: 480px;
+    border-radius: 10px;
+    width: 340px;
+    overflow: hidden;
+    cursor: pointer;
+}
+.overflow{
+    overflow: hidden; 
+}
+.overflow img{
+    
+    max-height: 200px;
+    object-fit: cover;
+    width: 100%;
+}
+.overflow:hover img{
+    transform: scale(1.05);
+    transition: transform 0.5s;
+}
+.card-info{
+    display: flex;  
+    flex-direction: column;
+    gap: 2px;
+    overflow: hidden;
+}
+.card-info h1{
+    font-size: 20px;
+    font-weight: 500;
+    padding: 10px 15px;
+    overflow: hidden;
+    max-width: 480px;
+    max-height: 40px;
+}
+.card-info p{
+    font-size: 15px;
+    font-weight: 400;
+    padding: 0 5px 10px 15px;
+    margin-bottom: 0;
+}
+.card-details{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 20px 15px 10px 15px;
+    border-top: solid 1px #6B7280;
+}
+.card-details h1{
+    font-size: 20px;
+    font-weight: 500;
+    background-color: rgb(15, 190, 15);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+.button{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+.btn-warning{
+    width: 120px;
+}
+.row{
+    margin-bottom: 112px;
+}
+@media screen and (max-width:500px) {
+    .full{
+        flex-direction: column;
+    }
+    .inpDiv{
+        width: 100%;
+    }
+    .inpDiv input,label{
+        width: 100%;
+    }
+    .perent-card{
+    margin-bottom: 38px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 0;
+        padding-left: 0;
+    }
+    
+}

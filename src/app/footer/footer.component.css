@@ -1,0 +1,61 @@
+footer{
+    background-color: #0B0C0B;
+    color: white;
+    display: flex;
+    height:  426px;
+    justify-content: space-evenly;
+}
+.left-footer{
+    display: flex;
+    gap: 5px;
+    flex-direction: column;
+}
+.contact{
+    margin-top: 15px;
+    gap: 19px;
+    display: flex;
+}
+.left-footer a{
+    font-size: 25px;
+}
+.logo{
+    margin-top: 50px;
+   height: 150px;
+   background-color: white;
+   width: 150px;
+   
+}
+a{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+}
+.right-footer{
+    margin-top: 50px;
+    display: flex;
+    width: 300px;
+    justify-content: space-between;
+}
+.right-footer a:hover{
+    font-size: 18px;
+    
+}
+.type{
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    width: 130px;
+}
+.type p , .pages p{
+    margin-bottom: 0px;
+}
+.cursor{
+    cursor: pointer;
+}
+@media only screen and (max-width:500px) {
+    .right-footer{
+        justify-content: space-evenly;
+        width: 230px;
+        margin-top: 30px;
+    }
+}
