@@ -26,17 +26,17 @@ img{
 }
 @media screen and (max-width:1400px),(min-width:992px) {
     .color{
-        color: red;
-        width: 266px;
-        height: 70px;
-        bottom: 59px;
-        border-radius: 45px;
+        color:#dee2e6;
+        width: 335px;
+        height: 80px;
+        bottom: 77px;
+        border-radius: 97px;
         font-size: 25px;
     }
 }
 @media screen and (max-width:991px){
     img{
-        color: red;
+        color: dee2e6;
        background-color: black;
     }
     .color{

@@ -1,0 +1,51 @@
+{
+	"folders": [
+		{
+			"name": "portfolio",
+			"path": "../../../../../portfolio"
+		},
+		{
+			"name": "angularService",
+			"path": "../../../../../angularService"
+		},
+		{
+			"name": "angularPost",
+			"path": "../../../../../angularPost"
+		},
+		{
+			"name": "final",
+			"path": "../../../../../final"
+		},
+		{
+			"name": "angularAnimeApi",
+			"path": "../../../../../angularAnimeApi"
+		},
+		{
+			"name": "api pagination",
+			"path": "../../../../../api pagination"
+		},
+		{
+			"name": "angulartest",
+			"path": "../../../../../angulartest"
+		},
+		{
+			"name": "finalProject",
+			"path": "../../../../../finalProject"
+		},
+		{
+			"name": "js dom2",
+			"path": "../../../../../javscript klasi/js dom2"
+		},
+		{
+			"name": "tic tac toe game",
+			"path": "../../../../../javscript klasi/tic tac toe game"
+		},
+		{
+			"name": "portfolio",
+			"path": "../../../../portfolio"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "portfolio"
+	}
+}
