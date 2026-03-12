@@ -5,6 +5,11 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class HttpService {
+  getYearsByBrand(selectedBrand: string) {
+    throw new Error('Method not implemented.');
+  }
+  // private baseUrl = 'https://localhost:7145/api/Cars';
+  private baseUrl = 'https://car-backend-ejn7.onrender.com/api/Cars';
   
   constructor(private http : HttpClient) { }
 
@@ -13,27 +18,27 @@ export class HttpService {
     const headers = new HttpHeaders({
       'Content-Type' : 'application/json'
     })
-    return this.http.post('https://upbeat-ganguly.185-229-111-17.plesk.page/api/Cars/addCar',Car,{headers, responseType:'text'})
+    return this.http.post(`${this.baseUrl}/addCar`,Car,{headers, responseType:'text'})
 }
   getAllCars(){
-    return this.http.get('https://upbeat-ganguly.185-229-111-17.plesk.page/api/Cars/cars')
+    return this.http.get(`${this.baseUrl}/cars`)
   }
   editCar(id:any,car:any){
     const headers= new HttpHeaders({
       'Content-Type' : 'application/json'
     })
-    return this.http.put(`https://upbeat-ganguly.185-229-111-17.plesk.page/api/Cars/updateCar/${id}`,car, {headers,responseType:'text'})
+    return this.http.put(`${this.baseUrl}/updateCar/${id}`,car, {headers,responseType:'text'})
   }
   deleteCar(index:any){
-    return this.http.delete(`https://upbeat-ganguly.185-229-111-17.plesk.page/api/Cars/deleteCar/${index}`)
+    return this.http.delete(`${this.baseUrl}/deleteCar/${index}`)
   }
   getCarById(id:any){
-    return this.http.get(`https://upbeat-ganguly.185-229-111-17.plesk.page/api/Cars/${id}`)
+    return this.http.get(`${this.baseUrl}/${id}`)
   }
   brendSearch(event:any): Observable<any>{
-    return this.http.get(`https://upbeat-ganguly.185-229-111-17.plesk.page/api/Cars/brand?brand=${event}`)
+    return this.http.get(`${this.baseUrl}/brand?brand=${event}`)
   }
   yearSearch(year:any){
-    return this.http.get(`https://upbeat-ganguly.185-229-111-17.plesk.page/api/Cars/year?year=${year}`)
+    return this.http.get(`${this.baseUrl}/year?year=${year}`)
   }
 }

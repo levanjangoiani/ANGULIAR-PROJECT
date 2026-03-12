@@ -1,30 +1,30 @@
-<div class="section">
-<select (change)="brandChange($event)">
+<!-- ბრენდის dropdown -->
+ <div class="filter">
+<select [(ngModel)]="selectedBrand" (change)="onBrandChange()">
   <option value="" disabled selected>Brands</option>
-  <option *ngFor="let b of brand" [value]="b">{{ b }}</option>
+  <option *ngFor="let b of brands" [value]="b">{{ b }}</option>
 </select>
 
-<!-- <select (change)="modelChange($event)" >
-  <option value="" disabled selected>Model</option>
-  <option *ngFor="let m of model" [value]="m">{{ m }}</option>
-</select>  -->
-
-<select (change)="yearChange($event)" >
+<!-- წლების dropdown -->
+<select (change)="yearChange($event)">
   <option value="" disabled selected>Years</option>
   <option *ngFor="let y of rowYear" [value]="y">{{ y }}</option>
 </select>
+
+<!-- ღილაკები -->
 <button class="btn btn-success" (click)="search()">search</button>
 <button class="btn btn-danger" [ngClass]="{'display':!isVisible , 'visible':isVisible }" (click)="clear()">clear</button>
 </div>
 
 
 
+
 <div class="total">Total cars avilable: {{allCars.length}}</div>
 <div class="row"  >
       <div  class="perent-card ">
-        <a *ngFor="let car of pagedCars let i = index">
+        <a *ngFor="let car of pagedCars let i = index" [routerLink]="['/cars',car.id]">
           
-          <div class="card" [routerLink]="['/cars',car.id]">
+          <div class="card">
             <div class="overflow">
               <img [src]="car.imageUrl " alt="{{ car.brand }} {{car.model}} Not Found 404" />
             </div>

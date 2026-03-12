@@ -13,6 +13,7 @@ import { HttpClientJsonpModule, HttpClientModule } from '@angular/common/http';
 import { AddcarComponent } from './addcar/addcar.component';
 import { FormsModule, NgModelGroup } from '@angular/forms';
 import { CarComponent } from './car/car.component';
+import { RouterModule } from '@angular/router';
 
 
 @NgModule({
@@ -21,7 +22,6 @@ import { CarComponent } from './car/car.component';
     HomeComponent,
     NavbarComponent,
     LoginComponent,
-    AllcarComponent,
     ContactComponent,
     FooterComponent,
     AddcarComponent,
@@ -31,6 +31,8 @@ import { CarComponent } from './car/car.component';
   ],
   imports: [
     BrowserModule,
+    AllcarComponent,
+    RouterModule,       // ← ეს აუცილებელია routerLink-ისთვის
     AppRoutingModule,
     HttpClientModule,
     FormsModule
